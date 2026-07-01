@@ -1,3 +1,5 @@
+Live: https://tickets-app-woad.vercel.app/
+
 ## Структура репозитория
 
 ```
