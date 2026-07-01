@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  @include small {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  @include small {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.adminPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--success-soft);
+  color: var(--success);
+  border-radius: var(--radius-pill);
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+  }
+}
+
+.bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-bottom: 16px;
+
+  input[type="text"],
+  select {
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 7px 10px;
+    font-size: 13px;
+    background: var(--surface);
+  }
+
+  input[type="text"] {
+    min-width: 220px;
+    flex: 1 1 220px;
+  }
+
+  @include mobile {
+    padding: 10px;
+
+    input[type="text"] {
+      min-width: 100%;
+      flex: 1 1 100%;
+    }
+  }
+
+  @include small {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.fieldGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  label {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  @include mobile {
+    flex: 1 1 100%;
+  }
+
+  @include small {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+
+    label {
+      white-space: normal;
+    }
+  }
+}
